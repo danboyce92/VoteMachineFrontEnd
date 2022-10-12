@@ -1,7 +1,10 @@
-
+.App {
+  color:black;
+}
 
 .parent {
-    height: 1200px;
+    position: absolute;
+    height: 1350px;
     width: 100%;
     background: #C3BEF7;
     display: flex;
@@ -9,31 +12,17 @@
     justify-content: center;
     }
     .child {
+    top: 230px;
+    position: absolute;
     background-color: #C490D1;
     width: 600px;
     height: 700px;
-    border-radius: 20%;
+    border-radius: 10%;
     }
 
-    .navbar {
-        overflow: hidden;
-        margin-top: 40px;
-
-        background-color: #C3BEF7;
-        position: fixed; /* Set the navbar to fixed position */
-        top: 0; /* Position the navbar at the top of the page */
-        width: 94%; /* Full width */
-      }
-
-      .navbar button {
-
-        margin-right: 20px;
-        float: right;
-      }
-
       .title {
-        position: fixed;
-        top: 175px;
+        position: absolute;
+        top: 150px;
 
         font-size: 72px;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -43,7 +32,16 @@
 
       
       .adminButton {
+        position: absolute;
+        top: 750px;
+        left: 430px;
+        z-index: 10;
+      }
+
+      .conBut {
         position: fixed;
-        top: 960px;
-        left: 900px;
+        margin-left: 1100px;
+        top: 80px;
+        z-index: 10;
+
       }

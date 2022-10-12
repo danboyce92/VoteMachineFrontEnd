@@ -1,0 +1,34 @@
+
+
+.admin {
+
+    position: absolute;
+    z-index: 10;
+    margin-left: 50px;
+    top: 750px;
+
+
+}
+
+#reset {
+    margin-left: 55px;
+}
+
+#admBut {
+    margin-top: 5px;
+    margin-left: 200px;
+}
+
+.input {
+    margin-top: 20px;
+    background-color: #C490D1;
+    color: #A60067;
+    font-size: 32px;
+    width: 500px;
+    
+    border-color: #C3BEF7
+}
+
+::placeholder {
+    color: #A60067;
+}

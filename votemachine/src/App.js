@@ -1,28 +1,37 @@
 import React from 'react';
-import './App.css';
+import './styles/App.css';
 import Register from './components/Register';
+import Admin from './components/Admin';
+import Voting from './components/Voting';
+
 
 function App() {
   return (
     <div className="App">
-      <nav className="navbar">
-        <button className="ui inverted green button">Connect Wallet</button>
-      </nav>
 
       <div className="parent">
-        <div className="title">
-          The Vote Machine
-        </div>
+
+      <div className="conBut">
+        <button className="ui large inverted green button">Connect Wallet</button>
+      </div>
+
+      <div className="title">
+            The Vote Machine
+          </div>
 
         <div className="child">
-          <Register />
 
+           <Register />
+          {/* <Voting /> */}
+          {/* <Admin /> */}
+
+          <div className="adminButton">
+          <button className="ui big inverted button">Admin</button>
+        </div>
 
         </div>
 
-        <div className="adminButton">
-          <button className="ui inverted basic button">Admin</button>
-        </div>
+
       
       </div>
       

@@ -1,29 +1,28 @@
-import React, { useState } from 'react'
-import '../styles/Register.css';
+import React from 'react';
+import '../styles/Voting.css';
 
-const Register = () => {
-const [voteReason, setVoteReason] = useState(' ');
-const [voteTime, setVoteTime] = useState('')
-    return(
+const Voting = () => {
+
+    return (
         <div>
-            <div className="regPhase">
-                Vote registration is currently taking place.
+            <div className="votPhase">
+                A vote is currently taking place.
             </div>
 
             <div className="voteReason">
-                This vote is concerning:  {voteReason}
+                This vote is concerning:  
             </div>
 
             <div className="voteDur">
                 Voting will be possible for 24 hours.
             </div>
 
-            <div className="votCom">
-                This vote will commence on: <br></br> {voteTime}
+            <div className="votEnd">
+                This vote will be open until the end of: <br></br> 
             </div>
 
-            <div className="regSta">
-                Please register candidates below. 
+            <div className="votSta">
+                Please vote for your candidate below. 
 
                 <form>
                 <div className="field" id="entCan">
@@ -40,4 +39,4 @@ const [voteTime, setVoteTime] = useState('')
     )
 }
 
-export default Register;
+export default Voting;
