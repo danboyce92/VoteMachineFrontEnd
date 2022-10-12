@@ -1,0 +1,49 @@
+
+
+.parent {
+    height: 1200px;
+    width: 100%;
+    background: #C3BEF7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .child {
+    background-color: #C490D1;
+    width: 600px;
+    height: 700px;
+    border-radius: 20%;
+    }
+
+    .navbar {
+        overflow: hidden;
+        margin-top: 40px;
+
+        background-color: #C3BEF7;
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        width: 94%; /* Full width */
+      }
+
+      .navbar button {
+
+        margin-right: 20px;
+        float: right;
+      }
+
+      .title {
+        position: fixed;
+        top: 175px;
+
+        font-size: 72px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #A60067;
+        text-decoration: underline;  
+      }
+
+      
+      .adminButton {
+        position: fixed;
+        top: 960px;
+        left: 900px;
+      }
