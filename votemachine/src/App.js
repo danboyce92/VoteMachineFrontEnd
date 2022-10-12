@@ -4,6 +4,7 @@ import Register from './components/Register';
 import Admin from './components/Admin';
 import Voting from './components/Voting';
 import Candidates from './components/Candidates';
+import Results from './components/Results';
 
 
 function App() {
@@ -22,9 +23,10 @@ function App() {
 
         <div className="child">
 
-           {/* <Register /> */}
-           <Voting />
-           <Admin /> 
+            <Register /> 
+           {/* <Voting /> */}
+           {/* <Results /> */}
+           {/* <Admin />  */}
            
 
           <div className="adminButton">
@@ -33,7 +35,7 @@ function App() {
 
         </div>
 
-        <Candidates />
+        {/* <Candidates /> */}
       
       </div>
       
