@@ -1,0 +1,55 @@
+
+
+.can {
+    position: relative;
+    color: white;
+
+    height: 120px;
+    width: 240px;
+    border-radius:60% / 60%;
+    background-color: #A60067;
+    text-align: center;
+    z-index: 10;
+
+    font-size: 32px;
+}
+
+.centering {
+    margin-top: 50px;
+}
+
+#canPos1 {
+    position: absolute;
+    left: 80px;
+    top: 280px;
+}
+
+#canPos2 {
+    position: absolute;
+    right: 80px;
+    top: 750px;
+}
+
+#canPos3 {
+    position: absolute;
+    left: 80px;
+    top: 750px;   
+}
+
+#canPos4 {
+    position: absolute;
+    right: 80px;
+    top: 280px;    
+}
+
+#canPos5 {
+    position: absolute;
+    left: 160px;
+    top: 515px;    
+}
+
+#canPos6 {
+    position: absolute;
+    right: 160px;
+    top: 515px;    
+}

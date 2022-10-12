@@ -3,6 +3,7 @@ import './styles/App.css';
 import Register from './components/Register';
 import Admin from './components/Admin';
 import Voting from './components/Voting';
+import Candidates from './components/Candidates';
 
 
 function App() {
@@ -21,9 +22,10 @@ function App() {
 
         <div className="child">
 
-           <Register />
-          {/* <Voting /> */}
-          {/* <Admin /> */}
+           {/* <Register /> */}
+           <Voting />
+           <Admin /> 
+           
 
           <div className="adminButton">
           <button className="ui big inverted button">Admin</button>
@@ -31,7 +33,7 @@ function App() {
 
         </div>
 
-
+        <Candidates />
       
       </div>
       
