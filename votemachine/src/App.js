@@ -1,90 +1,78 @@
-import React, { useState } from 'react';
-import { ethers } from 'ethers';
+import React, { useState, useEffect } from 'react';
 import './styles/App.css';
 import Register from './components/Register';
 import Admin from './components/Admin';
 import Voting from './components/Voting';
 import Candidates from './components/Candidates';
 import Results from './components/Results';
+import ConnectButton from './components/ConnectButton';
+
+
+// document.addEventListener("DOMContentLoaded", event => {
+//   const app = firebase.app();
+//   console.log(app)
+// })
 
 
 function App() {
  
-  const [publicKey, setPublickey] = useState();
+  const [vmContract, setVmContract] = useState();
 
-  const [network, setNetwork] = useState();
+  const [voteReason, setVoteReason] = useState();
 
-  const [chainId, setChainId] = useState();
-
-  const [msg, setMsg] = useState();
-
-
-  const connectButton = async () => {
-    const { ethereum } = window;
-    if (ethereum.isMetaMask) {
-      const provider = new ethers.providers.Web3Provider(ethereum);
-      const accounts = await provider.send("eth_requestAccounts", []);
-      const { name, chainId } = await provider.getNetwork();
-      setNetwork(name);
-      setChainId(chainId);
-      setPublickey(accounts[0]);
-    } else {
-      setMsg("Install MetaMask");
-    }
-  };
-
-  const connectWallet = () => {
-    if (!publicKey) {
-      return  "Connect Wallet"
-    } else return  "Connected"
-    
+  const handleVmContract = (vmContract) => {
+    setVmContract(vmContract);
   }
-  
-  
-  
-  
+
+  const handleReasonChange = (voteReason) => {
+    setVoteReason(voteReason);
+  }
+
+  // const adminConnect = async () => {
+  //   const adminAdd = await vmContract.admin()
+  //   if(publicKey === adminAdd) {
+  //     return true;
+  //   } else return false;
+  // }
+
+
   return (
     <div className="App">
 
       <div className="parent">
-        <div className="info">
-          Public key: {publicKey} 
-          <br></br>
-          Network: {network}
-          <br></br>
-          Chain ID: {chainId}
+
+        <div className="test">
+          consolelog:   ''
         </div>
-
-      <div className="conBut">
-        <button className="ui large inverted green button"
-        onClick={connectButton}
-        >{connectWallet()}</button>
-
-      </div>
-
+        
       <div className="title">
-            The Vote Machine
-            
+            The Vote Machine 
           </div>
 
         <div className="child">
 
-            <Register /> 
+          <ConnectButton 
+          vmContract={vmContract}
+          handleVmContract={handleVmContract}
+          />
+            <Register voteReason={voteReason}/> 
            {/* <Voting /> */}
            {/* <Results /> */}
-           {/* <Admin />  */}
+
+            <Admin voteReason={voteReason} 
+            handleReasonChange={handleReasonChange} 
+            />
            
-
           <div className="adminButton">
-          <button className="ui big inverted button">Admin</button>
+          <button 
+          className="ui big inverted button"
+          onClick=''
+          >Admin</button>
         </div>
 
         </div>
-
-        {/* <Candidates /> */}
-      
-      </div>
-      
+        {/* <Candidates /> */} 
+      </div> 
     </div>
   );
 }

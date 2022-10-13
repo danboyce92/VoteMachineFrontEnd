@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Admin.css';
 
-const Admin = () => {
+const Admin = (props) => {
+
+const [reason, setReason] = useState('');
+
+const onClick = (e) => {
+    e.preventDefault();
+
+    props.handleReasonChange(reason)
+
+}
 
     return (
         <div className="admin">
@@ -10,15 +19,28 @@ const Admin = () => {
             
             <form>
                 <div className="field">
-                    <input className="input" type='text' placeholder="Enter what the vote is concerning.." />
-                    <button className="ui large violet button" id="admBut">Submit</button>
+                    <input 
+                    className="input" 
+                    type='text' 
+                    placeholder="Enter what the vote is concerning.."
+                    onChange={(e) => setReason(e.target.value)}
+                    />
+                    <button 
+                    className="ui large violet button" 
+                    id="admBut"
+                    onClick={onClick}
+                    >Submit</button>
                 </div>
             </form>
 
             <form>
                 <div className="field">
                     <input className="input" type='date' placeholder="Enter the time and date it begins.." />
-                    <button className="ui large violet button" id="admBut">Submit</button>
+                    <button 
+                    className="ui large violet button" 
+                    id="admBut"
+
+                    >Submit</button>
                 </div>
             </form>
         

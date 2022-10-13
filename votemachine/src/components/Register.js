@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
 import '../styles/Register.css';
 
-const Register = () => {
-const [voteReason, setVoteReason] = useState(' ');
+const Register = (props) => {
+
 const [voteTime, setVoteTime] = useState('')
+    
+
+
+
+    
     return(
         <div>
             <div className="regPhase">
@@ -11,7 +16,7 @@ const [voteTime, setVoteTime] = useState('')
             </div>
 
             <div className="voteReason">
-                This vote is concerning:  {voteReason}
+                This vote is concerning:  {props.voteReason}
             </div>
 
             <div className="voteDur">
