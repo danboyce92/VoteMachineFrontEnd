@@ -3,6 +3,7 @@ import './styles/App.css';
 import Register from './components/Register';
 import Admin from './components/Admin';
 import VoteReason from './components/VoteReason';
+import VoteTime from './components/VoteTime';
 import Voting from './components/Voting';
 import Candidates from './components/Candidates';
 import Results from './components/Results';
@@ -27,15 +28,6 @@ function App() {
     setVmContract(vmContract);
   }
 
-  /*const handleReasonChange = (voteReason) => {
-    setVoteReason(voteReason);
-    
-  }    
-    */
-
-
-
-  
 
   // const adminConnect = async () => {
   //   const adminAdd = await vmContract.admin()
@@ -43,6 +35,8 @@ function App() {
   //     return true;
   //   } else return false;
   // }
+
+
 
 
   return (
@@ -69,10 +63,9 @@ function App() {
            {/* <Results /> */}
 
            <VoteReason />
+           <VoteTime />
 
-            <Admin voteReason=''
-            handleReasonChange='' 
-            />
+            <Admin />
            
           <div className="adminButton">
           <button 

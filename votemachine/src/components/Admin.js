@@ -1,16 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Admin.css';
-import { writeVoteReason } from '../Firebase';
+import { writeVoteReason, writeVoteTime } from '../Firebase';
 
 const Admin = (props) => {
 
     const [voteReason, setVoteReason] = useState('');
+    const [voteTime, setVoteTime] = useState('');
 
-const onClickReason = (e) => {
-    e.preventDefault();
+    const onClickReason = (e) => {
+        e.preventDefault();
+        writeVoteReason(voteReason)
+    }
 
-    writeVoteReason(voteReason)
-}
+    const onClickTime = (e) => {
+        e.preventDefault();
+        writeVoteTime(voteTime)
+
+    }
+
 
     return (
         <div className="admin">
@@ -22,6 +29,7 @@ const onClickReason = (e) => {
                     <input 
                     className="input" 
                     type='text' 
+                    maxLength="120"
                     placeholder="Enter what the vote is concerning.."
                     onChange={(e) => setVoteReason(e.target.value)}
                     />
@@ -35,10 +43,16 @@ const onClickReason = (e) => {
 
             <form>
                 <div className="field">
-                    <input className="input" type='date' placeholder="Enter the time and date it begins.." />
+                    <input 
+                    className="input" 
+                    type='date' 
+                    placeholder="Enter the time and date it begins.." 
+                    onChange={(e) => setVoteTime(e.target.value)}
+                    />
                     <button 
                     className="ui large violet button" 
                     id="admBut"
+                    onClick={onClickTime}
 
                     >Submit</button>
                 </div>

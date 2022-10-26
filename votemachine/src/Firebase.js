@@ -28,3 +28,9 @@ export function writeVoteReason(text) {
     });
 }
 
+export function writeVoteTime(time) {
+  set(ref(db, 'voteTime'), {
+    voteTime: time
+  });
+}
+

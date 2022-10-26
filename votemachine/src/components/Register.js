@@ -4,10 +4,6 @@ import '../styles/Register.css';
 
 const Register = () => {
 
-const [voteTime, setVoteTime] = useState('')
-    
-
-
 
     
     return(
@@ -22,9 +18,7 @@ const [voteTime, setVoteTime] = useState('')
                 Voting will be possible for 24 hours.
             </div>
 
-            <div className="votCom">
-                This vote will commence on: <br></br> {voteTime}
-            </div>
+
 
             <div className="regSta">
                 Please register candidates below. 

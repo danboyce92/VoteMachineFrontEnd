@@ -1,7 +1,7 @@
 
 
 .admin {
-
+    font-family: 'Maven Pro', sans-serif;
     position: absolute;
     z-index: 10;
     margin-left: 50px;
@@ -27,7 +27,7 @@
     width: 500px;
     
     border-color: #C3BEF7;
-    font-family: 'Irish Grover', cursive;
+
     
 }
 
