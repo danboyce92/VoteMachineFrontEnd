@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Admin.css';
+import { writeVoteReason } from '../Firebase';
 
 const Admin = (props) => {
 
-const [reason, setReason] = useState('');
+    const [voteReason, setVoteReason] = useState('');
 
-const onClick = (e) => {
+const onClickReason = (e) => {
     e.preventDefault();
 
-    props.handleReasonChange(reason)
-
+    writeVoteReason(voteReason)
 }
 
     return (
@@ -23,12 +23,12 @@ const onClick = (e) => {
                     className="input" 
                     type='text' 
                     placeholder="Enter what the vote is concerning.."
-                    onChange={(e) => setReason(e.target.value)}
+                    onChange={(e) => setVoteReason(e.target.value)}
                     />
                     <button 
                     className="ui large violet button" 
                     id="admBut"
-                    onClick={onClick}
+                    onClick={onClickReason}
                     >Submit</button>
                 </div>
             </form>

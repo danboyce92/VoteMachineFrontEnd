@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
+
 import '../styles/Register.css';
 
-const Register = (props) => {
+const Register = () => {
 
 const [voteTime, setVoteTime] = useState('')
     
@@ -15,9 +16,7 @@ const [voteTime, setVoteTime] = useState('')
                 Vote registration is currently taking place.
             </div>
 
-            <div className="voteReason">
-                This vote is concerning:  {props.voteReason}
-            </div>
+
 
             <div className="voteDur">
                 Voting will be possible for 24 hours.

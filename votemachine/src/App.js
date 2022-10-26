@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './styles/App.css';
 import Register from './components/Register';
 import Admin from './components/Admin';
+import VoteReason from './components/VoteReason';
 import Voting from './components/Voting';
 import Candidates from './components/Candidates';
 import Results from './components/Results';
 import ConnectButton from './components/ConnectButton';
+
 
 
 // document.addEventListener("DOMContentLoaded", event => {
@@ -18,15 +20,22 @@ function App() {
  
   const [vmContract, setVmContract] = useState();
 
-  const [voteReason, setVoteReason] = useState();
+
+  
 
   const handleVmContract = (vmContract) => {
     setVmContract(vmContract);
   }
 
-  const handleReasonChange = (voteReason) => {
+  /*const handleReasonChange = (voteReason) => {
     setVoteReason(voteReason);
-  }
+    
+  }    
+    */
+
+
+
+  
 
   // const adminConnect = async () => {
   //   const adminAdd = await vmContract.admin()
@@ -55,12 +64,14 @@ function App() {
           vmContract={vmContract}
           handleVmContract={handleVmContract}
           />
-            <Register voteReason={voteReason}/> 
+            <Register /> 
            {/* <Voting /> */}
            {/* <Results /> */}
 
-            <Admin voteReason={voteReason} 
-            handleReasonChange={handleReasonChange} 
+           <VoteReason />
+
+            <Admin voteReason=''
+            handleReasonChange='' 
             />
            
           <div className="adminButton">
