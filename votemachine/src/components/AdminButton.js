@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ethers } from 'ethers';
 import abi from '../abi.json';
 
 const AdminButton = () => {
 
+
     const contractABI = abi.abi;
     const contractAddress = "0xCe0561Da3B6A6AF21D0555eE2a24D3EDA76f613c";
-
+    let adminAdd = '';
+    let publicKey = '0';
 
     const retrieveAdmin = async () => {
 
@@ -17,15 +19,16 @@ const AdminButton = () => {
         if (ethereum) {
           const provider = new ethers.providers.Web3Provider(ethereum, "any");
           const signer = provider.getSigner();
+          const accounts = await provider.send("eth_requestAccounts", []);
           const voteMachine = new ethers.Contract(
             contractAddress,
             contractABI,
             signer
           );
 
-            const adminAdd = await voteMachine.admin();
+            adminAdd = await voteMachine.admin();
 
-            console.log(adminAdd)
+            publicKey = accounts[0];
 
         }
 
@@ -35,13 +38,29 @@ const AdminButton = () => {
 
     }
 
+    const adminValid = async () => {
+
+        await retrieveAdmin();
+
+
+        if(publicKey.toUpperCase() === adminAdd.toUpperCase()) {
+            console.log('Address Match!')
+        } else {
+            console.log("User does not have admin privileges")
+        }
+       
+    }
+
+
+
+
     return (
         <div>
 
             <div className="adminButton">
                 <button 
                 className="ui big inverted button"
-                onClick={retrieveAdmin}
+                onClick={adminValid}
                 >Admin</button>
             </div>
 

@@ -12,29 +12,7 @@ import AdminButton from './components/AdminButton';
 
 
 
-// document.addEventListener("DOMContentLoaded", event => {
-//   const app = firebase.app();
-//   console.log(app)
-// })
-
-
 function App() {
- 
-
-
-
-  
-
-
-
-
-  // const adminConnect = async () => {
-  //   const adminAdd = await vmContract.admin()
-  //   if(publicKey === adminAdd) {
-  //     return true;
-  //   } else return false;
-  // }
-
 
 
 
@@ -54,15 +32,13 @@ function App() {
         <div className="child">
 
           <ConnectButton />
-            <Register /> 
+          <Register /> 
            {/* <Voting /> */}
            {/* <Results /> */}
 
-           <VoteReason />
-           <VoteTime />
-
-            <Admin />
-           
+          <VoteReason />
+          <VoteTime />
+          <Admin />
           <AdminButton />
 
         </div>

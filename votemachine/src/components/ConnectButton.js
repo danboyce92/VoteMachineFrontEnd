@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ethers } from 'ethers';
-
 import '../styles/ConnectButton.css';
 
 const ConnectButton = (props) => {
@@ -14,7 +13,6 @@ const ConnectButton = (props) => {
     const [msg, setMsg] = useState();
   
     const [balanceInEther, setBalanceInEther] = useState();
-
 
 
 
