@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ethers } from 'ethers';
-import ABI from '../abi.json';
+
 import '../styles/ConnectButton.css';
 
 const ConnectButton = (props) => {
@@ -15,7 +15,7 @@ const ConnectButton = (props) => {
   
     const [balanceInEther, setBalanceInEther] = useState();
 
-    const [vmContract, setVmContract] = useState();
+
 
 
     const connectButton = async () => {
@@ -32,9 +32,6 @@ const ConnectButton = (props) => {
           const balance = await provider.getBalance(accounts[0]);
           setBalanceInEther(ethers.utils.formatEther(balance));
     
-          setVmContract(new ethers.Contract('0xCe0561Da3B6A6AF21D0555eE2a24D3EDA76f613c', ABI, provider));
-    
-          props.handleVmContract(vmContract)
     
         } else {
           setMsg("Install MetaMask");

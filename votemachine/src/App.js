@@ -8,6 +8,7 @@ import Voting from './components/Voting';
 import Candidates from './components/Candidates';
 import Results from './components/Results';
 import ConnectButton from './components/ConnectButton';
+import AdminButton from './components/AdminButton';
 
 
 
@@ -19,14 +20,12 @@ import ConnectButton from './components/ConnectButton';
 
 function App() {
  
-  const [vmContract, setVmContract] = useState();
+
 
 
   
 
-  const handleVmContract = (vmContract) => {
-    setVmContract(vmContract);
-  }
+
 
 
   // const adminConnect = async () => {
@@ -54,10 +53,7 @@ function App() {
 
         <div className="child">
 
-          <ConnectButton 
-          vmContract={vmContract}
-          handleVmContract={handleVmContract}
-          />
+          <ConnectButton />
             <Register /> 
            {/* <Voting /> */}
            {/* <Results /> */}
@@ -67,12 +63,7 @@ function App() {
 
             <Admin />
            
-          <div className="adminButton">
-          <button 
-          className="ui big inverted button"
-          onClick=''
-          >Admin</button>
-        </div>
+          <AdminButton />
 
         </div>
         {/* <Candidates /> */} 
