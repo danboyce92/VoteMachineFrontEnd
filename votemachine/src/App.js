@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './styles/App.css';
 import Register from './components/Register';
-import Admin from './components/Admin';
+
 import VoteReason from './components/VoteReason';
 import VoteTime from './components/VoteTime';
 import Voting from './components/Voting';
@@ -38,7 +38,7 @@ function App() {
 
           <VoteReason />
           <VoteTime />
-          <Admin />
+
           <AdminButton />
 
         </div>

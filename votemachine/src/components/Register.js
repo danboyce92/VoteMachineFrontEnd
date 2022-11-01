@@ -1,18 +1,13 @@
-import React, { useState } from 'react'
-
+import React from 'react';
 import '../styles/Register.css';
 
 const Register = () => {
-
-
     
     return(
         <div>
             <div className="regPhase">
                 Vote registration is currently taking place.
             </div>
-
-
 
             <div className="voteDur">
                 Voting will be possible for 24 hours.
@@ -31,8 +26,6 @@ const Register = () => {
             </form>
 
             </div>
-
-
 
         </div>
     )

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../styles/Admin.css';
 import { writeVoteReason, writeVoteTime } from '../Firebase';
 
-const Admin = (props) => {
+const Admin = () => {
 
     const [voteReason, setVoteReason] = useState('');
     const [voteTime, setVoteTime] = useState('');
