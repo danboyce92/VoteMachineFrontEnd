@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/Voting.css';
+import VoteReason from './VoteReason';
+import VoteTime from './VoteTime';
 
 const Voting = () => {
 
@@ -13,9 +15,14 @@ const Voting = () => {
                 This vote is concerning:  
             </div>
 
+            <VoteReason />
+
+
             <div className="voteDur">
                 Voting will be possible for 24 hours.
             </div>
+
+
 
             <div className="votEnd">
                 This vote will be open until the end of: <br></br> 

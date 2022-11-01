@@ -20,10 +20,6 @@ function App() {
     <div className="App">
 
       <div className="parent">
-
-        <div className="test">
-          consolelog:   ''
-        </div>
         
       <div className="title">
             The Vote Machine 
@@ -35,9 +31,6 @@ function App() {
           <Register /> 
            {/* <Voting /> */}
            {/* <Results /> */}
-
-          <VoteReason />
-          <VoteTime />
 
           <AdminButton />
 

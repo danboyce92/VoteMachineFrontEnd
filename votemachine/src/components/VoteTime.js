@@ -7,6 +7,7 @@ const VoteTime = () => {
 
     const [voteTime, setVoteTime] = useState('')
 
+    //Gets date of vote commencement from database
     const getTime = () => {
         const voteTimeRef = ref(db, 'voteTime/voteTime');
         onValue(voteTimeRef, (snapshot) => {
@@ -22,7 +23,7 @@ const VoteTime = () => {
     return (
         <div>
             <div className="votCom">
-                This vote will commence on: <br></br> 
+
                 
                 <div className='time'>
                 <b>{voteTime}</b>

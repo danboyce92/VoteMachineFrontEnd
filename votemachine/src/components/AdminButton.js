@@ -13,6 +13,7 @@ const AdminButton = () => {
   let adminAdd = '';
   let publicKey = '';
 
+  //Retrieves the admin address of the smart contract
   const retrieveAdmin = async () => {
 
     try {
@@ -41,6 +42,7 @@ const AdminButton = () => {
 
   }
 
+  //Verifies that the current user is the admin
    const adminValid = async () => {
 
       await retrieveAdmin();
