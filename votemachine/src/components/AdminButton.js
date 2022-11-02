@@ -11,7 +11,7 @@ const AdminButton = () => {
   const contractABI = abi.abi;
   const contractAddress = "0xCe0561Da3B6A6AF21D0555eE2a24D3EDA76f613c";
   let adminAdd = '';
-  let publicKey = '';
+  let publicKey = '0';
 
   //Retrieves the admin address of the smart contract
   const retrieveAdmin = async () => {

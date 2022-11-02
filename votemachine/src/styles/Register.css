@@ -50,6 +50,10 @@
 
 }
 
+.time {
+    margin-top: 55px;
+}
+
 .regSta {
     position: absolute;
     margin-top: 440px;
@@ -72,8 +76,4 @@
     margin-top: 10px;
     margin-left: 180px;
     
-}
-
-.votTime {
-    top: 0px;
 }

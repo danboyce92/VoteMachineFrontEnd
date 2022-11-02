@@ -51,7 +51,7 @@
 
 .votSta {
     position: absolute;
-    margin-top: 440px;
+    margin-top: 200px;
     margin-left: 25px;
     padding: 40px;
 
@@ -62,7 +62,7 @@
 }
 
 #entCan {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 #subBut {
@@ -70,3 +70,10 @@
     margin-top: 10px;
     margin-left: 180px;
 }
+
+.voteExp {
+    position: absolute;
+    margin-top: 460px;
+    margin-left: 140px;
+    font-size: 30px;
+    }

@@ -24,9 +24,8 @@ const VoteTime = () => {
         <div>
             <div className="votCom">
 
-                
                 <div className='time'>
-                <b>{voteTime}</b>
+                    <b>{voteTime}</b>
                 </div>
 
             </div>

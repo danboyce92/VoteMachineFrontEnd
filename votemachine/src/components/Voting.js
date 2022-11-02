@@ -17,17 +17,6 @@ const Voting = () => {
 
             <VoteReason />
 
-
-            <div className="voteDur">
-                Voting will be possible for 24 hours.
-            </div>
-
-
-
-            <div className="votEnd">
-                This vote will be open until the end of: <br></br> 
-            </div>
-
             <div className="votSta">
                 Please vote for your candidate below. 
 
@@ -40,7 +29,12 @@ const Voting = () => {
 
             </div>
 
+            <div className='voteExp'>
+                This vote will expire in : 
+                <div className='clock'>
 
+                </div>
+            </div>
 
         </div>
     )
